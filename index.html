@@ -3,219 +3,201 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Name - Portfolio</title>
+  <title>Amelia Scappaticci - Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
   <style>
-    /* ===== BASIC RESET AND STYLES ===== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    .hero-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+}
+
+@media (max-width: 768px) {
+  .hero-row {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:Inter,system-ui,sans-serif;background:#f8fafc;color:#0f172a;line-height:1.6}
+    .container{max-width:1050px;margin:auto;padding:0 20px}
+    section{padding:70px 0}
+    h1,h2,h3{letter-spacing:-.02em}
+    h2{margin-bottom:1rem}
+    a{text-decoration:none;color:#2563eb;font-weight:600}
+
+    header{
+      padding:90px 0;
+      color:white;
+      background:linear-gradient(120deg,#4f46e5,#0ea5e9);
     }
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background-color: #f9f9f9;
-    }
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    h1, h2, h3 {
-      margin-bottom: 1rem;
-    }
-    a {
-      color: #0066cc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+    header h1{font-size:3rem}
+    header p{margin-top:10px;font-size:1.2rem}
+
+    .nav{background:white;border-bottom:1px solid #e2e8f0;padding:14px 0}
+    .nav a{margin-right:15px;color:#334155;font-weight:600}
+
+    .card{
+      background:white;
+      border-radius:14px;
+      padding:22px;
+      border:1px solid #e2e8f0;
+      box-shadow:0 8px 20px rgba(0,0,0,0.05)
     }
 
-    /* ===== HEADER / HERO ===== */
-    header {
-      background: linear-gradient(to right, #4e54c8, #8f94fb);
-      color: white;
-      text-align: center;
-      padding: 100px 20px;
-    }
-    header h1 {
-      font-size: 3rem;
-    }
-    header p {
-      font-size: 1.4rem;
-      margin-top: 0.5rem;
+    .projects-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:18px;margin-top:20px
     }
 
-    /* ===== SECTIONS ===== */
-    section {
-      padding: 60px 0;
-    }
-    #about, #skills, #contact {
-      background: white;
-    }
-    #projects {
-      background: #f0f4f8;
+    .skill{
+      display:inline-block;
+      margin:6px;
+      padding:8px 14px;
+      border-radius:20px;
+      background:#e0e7ff;
+      font-size:.9rem
     }
 
-    /* Project cards */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-top: 2rem;
-    }
-    .project-card {
-      background: white;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-    .project-card:hover {
-      transform: translateY(-5px);
-    }
-    .project-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-    .project-info {
-      padding: 20px;
-    }
-
-    /* Skills list */
-    .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 1.5rem;
-    }
-    .skill {
-      background: #e0e0e0;
-      padding: 8px 16px;
-      border-radius: 20px;
-      font-size: 0.95rem;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #333;
-      color: white;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      header h1 { font-size: 2.5rem; }
-      header { padding: 80px 20px; }
-    }
+    footer{text-align:center;padding:30px;color:#64748b}
   </style>
 </head>
+
 <body>
 
-  <!-- ===== HERO / INTRO SECTION ===== -->
-  <header>
-    <div class="container">
-      <h1><!-- CHANGE THIS -->Your Name Here</h1>
-      <p><!-- CHANGE THIS -->Lorem | Ipsum | Lorem Ipsum</p>
+<div class="nav container">
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<header>
+  <div class="container hero-row">
+    <div class="hero-text">
+      <h1>Amelia Scappaticci</h1>
+      <p>Economic Analytics • Health Economics • Data Analysis</p>
     </div>
-  </header>
 
-  <!-- ===== ABOUT / BIO SECTION ===== -->
-  <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p><!-- CHANGE THIS -->Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      
-      <p><!-- CHANGE THIS -->Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      
-      <!-- Optional: Add a profile photo (upload your photo to the repo as 'profile.jpg' and update the src) -->
-      <!-- <img src="profile.jpg" alt="Your Photo" style="width:200px; border-radius:50%; display:block; margin:2rem auto;"> -->
-    </div>
-  </section>
+    <img src="profile.png" alt="Amelia Scappaticci" class="hero-photo">
+  </div>
+</header>
 
-  <!-- ===== PROJECTS SECTION ===== -->
-  <section id="projects">
-    <div class="container">
-      <h2>My Projects</h2>
-      <p><!-- CHANGE THIS -->Here are some things I've built. Click the links to see them live or view the code on GitHub.</p>
 
-      <div class="projects-grid">
+<section id="about">
+  <div class="container card">
+    <h2>About Me</h2>
+    <p>
+      I am a Master’s student in Economic Analytics with a strong interest in health economics,
+      data analysis, and how financial incentives shape decision-making and outcomes in healthcare.
+      I enjoy turning complex datasets into clear, actionable insights using tools like R, Python,
+      Stata, and SQL.
+    </p>
+    <p style="margin-top:10px;">
+      My background combines analytics, research, tutoring, and healthcare experience, giving me
+      both technical and real-world perspectives on data-driven decision making.
+    </p>
+  </div>
+</section>
 
-        <!-- PROJECT 1 - Duplicate this block for more projects -->
-        <div class="project-card">
-          <!-- Optional: Add a screenshot (upload image to repo and update src) -->
-          <!-- <img src="project1-screenshot.png" alt="Project 1"> -->
-          <div class="project-info">
-            <h3><!-- CHANGE THIS -->Project One Title</h3>
-            <p><!-- CHANGE THIS -->A short description of what this project does, technologies used (e.g., HTML, CSS, JavaScript), and what you learned.</p>
-            <p>
-              <a href="https://github.com/yourusername/project-one" target="_blank">View on GitHub</a> | 
-              <a href="https://yourusername.github.io/project-one" target="_blank">Live Demo</a>
-            </p>
-          </div>
-        </div>
+<section id="projects">
+  <div class="container">
+    <h2>Projects</h2>
+    <div class="projects-grid">
 
-        <!-- PROJECT 2 - Add more by copying the above block -->
-        <div class="project-card">
-          <!-- <img src="project2-screenshot.png" alt="Project 2"> -->
-          <div class="project-info">
-            <h3><!-- CHANGE THIS -->Project Two Title</h3>
-            <p><!-- CHANGE THIS -->Description here. Make it sound exciting!</p>
-            <p>
-              <a href="#" target="_blank">View on GitHub</a> | 
-              <a href="#" target="_blank">Live Demo</a>
-            </p>
-          </div>
-        </div>
-
-        <!-- Add as many more project cards as you want -->
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SKILLS / RESUME ELEMENTS SECTION ===== -->
-  <section id="skills">
-    <div class="container">
-      <h2>Skills & Experience</h2>
-      <p><!-- CHANGE THIS -->Things I'm good at or learning right now:</p>
-
-      <div class="skills-list">
-        <span class="skill"><!-- CHANGE/ADD -->Python</span>
-        <span class="skill"><!-- CHANGE/ADD -->R & R shiny</span>
-        <span class="skill"><!-- CHANGE/ADD -->Git & GitHub</span>
-        <!-- Add more <span class="skill">Skill Name</span> lines here -->
+      <div class="card">
+        <h3>Predictive Loan Repayment Model</h3>
+        <p>
+          Built a predictive model in Stata for a credit company to identify customer characteristics
+          associated with successful loan repayment. Cleaned, merged, and analyzed large datasets and
+          presented findings to company representatives.
+        </p>
       </div>
 
-      <!-- Optional: Add education or resume highlights -->
-      <h3 style="margin-top: 2rem;">Education</h3>
-      <p><!-- CHANGE THIS -->High School / College / University — [Year]–Present<br>
-         Major: [Your Major]</p>
-    </div>
-  </section>
+      <div class="card">
+<h3>Undergraduate Honors Thesis</h3>
+  <p>
+    Econometric analysis of athlete compensation policies and their financial impact
+    on Power 5 football programs, studying revenue and donor behavior shifts using Stata.
+  </p>
 
-  <!-- ===== CONTACT SECTION ===== -->
-  <section id="contact">
-    <div class="container">
-      <h2>Get in Touch</h2>
-      <p><!-- CHANGE THIS -->I'm always open to chatting about projects or internships.</p>
-      <ul style="list-style: none; margin-top: 1rem;">
-        <li>Email: <!-- CHANGE THIS -->your.email@example.com</li>
-        <li>GitHub: <!-- CHANGE THIS --><a href="https://github.com/yourusername">github.com/yourusername</a></li>
-        <li>LinkedIn: <!-- CHANGE THIS --><a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></li>
-        <!-- Add more links (Twitter/X, etc.) -->
-      </ul>
-    </div>
-  </section>
+  <p>
+    <a href="thesis.pdf" target="_blank">
+      Read Full Thesis (PDF)
+    </a>
+  </p>
+</div>
 
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <p>&copy; <!-- CHANGE THIS -->2026 Your Name. Built with HTML & CSS. Hosted on GitHub Pages.</p>
-  </footer>
+ <div class="card">
+  <h3>NFL QB Data Dashboard (R Shiny)</h3>
+  <p>
+    Interactive data dashboard built in R Shiny to explore NFL quarterback performance.
+    Includes filters, summary metrics, and visualizations designed to quickly compare
+    players and identify trends in performance data.
+  </p>
+
+  <p>
+    <a href="https://amelia-scappaticci.shinyapps.io/nfl-qb-dashboard/"
+       target="_blank" rel="noopener">Live App</a>
+</div>
+
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container card">
+    <h2>Skills</h2>
+    <span class="skill">R</span>
+    <span class="skill">Python</span>
+    <span class="skill">Stata</span>
+    <span class="skill">SQL</span>
+    <span class="skill">Excel</span>
+    <span class="skill">Data Modeling</span>
+    <span class="skill">Statistical Analysis</span>
+    <span class="skill">Health Economics</span>
+
+    <h3 style="margin-top:20px;">Education</h3>
+    <p>
+      Clemson University<br>
+      M.S. Economic Analytics, GPA 4.00 (May 2026)<br>
+      B.S. Economics, Minor Mathematical Sciences, Magna Cum Laude (May 2025)
+    </p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container card">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:ascappaticci60@gmail.com">ascappaticci60@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/ameliascappaticci" target="_blank">
+      github.com/ameliascappaticci</a></p>
+    <p><p>
+  LinkedIn:
+  <a href="https://www.linkedin.com/in/amelia-scappaticci/" target="_blank">
+    linkedin.com/in/amelia-scappaticci
+  </a>
+</p>
+
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 Amelia Scappaticci • Hosted on GitHub Pages</p>
+</footer>
 
 </body>
 </html>
